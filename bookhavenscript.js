@@ -14,7 +14,10 @@ document.getElementById("subscribe-btn").addEventListener("click", function() {
   }
 });
 
-// Add book to cart functionality
-document.getElementById("addToCartBtn").addEventListener("click", function() {
-  alert("Thank you for adding!");
+const addToCartButtons = document.querySelectorAll(".addToCartBtn");
+
+addToCartButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    alert("Item added to cart!");
+  });
 });
