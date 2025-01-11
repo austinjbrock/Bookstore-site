@@ -1,4 +1,3 @@
-// 
 document.getElementById("subscribe-btn").addEventListener("click", function() {
   const email = prompt("Enter your email to subscribe to our newsletter:");
   
@@ -13,4 +12,9 @@ document.getElementById("subscribe-btn").addEventListener("click", function() {
   } else {
     alert("Subscription canceled.");
   }
+});
+
+// Add book to cart functionality
+document.getElementById("addToCartBtn").addEventListener("click", function() {
+  alert("Thank you for adding!");
 });
