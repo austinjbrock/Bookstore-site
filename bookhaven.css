@@ -9,7 +9,9 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    padding-top: 70px; /* Offset for sticky navbar */
+    padding-top: 70px; 
+    background-color: #041224;
+    color: #e7e7e7;
   }
   
   /* Navbar Styles */
