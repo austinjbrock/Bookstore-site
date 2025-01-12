@@ -57,6 +57,15 @@
     color: #666;
   }
 
+  #featured-products{
+    text-align: center;
+
+  }
+
+  #featured-products p{
+    margin-bottom: 20px;
+  }
+
   footer {
     text-align: center;
     margin-top: 15px;
