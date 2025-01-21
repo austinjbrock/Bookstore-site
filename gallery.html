@@ -26,54 +26,39 @@
     <p>Browse our products below.</p>
   </header>
 
-  <section class="gallery">
-    <!-- 9 Image Thumbnails with Descriptions -->
-    <div class="image-item">
-      <img src="image1.jpg" alt="Product 1">
-      <p>Description of Product 1</p>
-      <button class="addToCartBtn" data-id="1" data-name="Product 1" data-price="20">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image2.jpg" alt="Product 2">
-      <p>Description of Product 2</p>
-      <button class="addToCartBtn" data-id="2" data-name="Product 2" data-price="25">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image3.jpg" alt="Product 3">
-      <p>Description of Product 3</p>
-      <button class="addToCartBtn" data-id="3" data-name="Product 3" data-price="30">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image4.jpg" alt="Product 4">
-      <p>Description of Product 4</p>
-      <button class="addToCartBtn" data-id="4" data-name="Product 4" data-price="40">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image5.jpg" alt="Product 5">
-      <p>Description of Product 5</p>
-      <button class="addToCartBtn" data-id="5" data-name="Product 5" data-price="50">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image6.jpg" alt="Product 6">
-      <p>Description of Product 6</p>
-      <button class="addToCartBtn" data-id="6" data-name="Product 6" data-price="60">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image7.jpg" alt="Product 7">
-      <p>Description of Product 7</p>
-      <button class="addToCartBtn" data-id="7" data-name="Product 7" data-price="70">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image8.jpg" alt="Product 8">
-      <p>Description of Product 8</p>
-      <button class="addToCartBtn" data-id="8" data-name="Product 8" data-price="80">Add to Cart</button>
-    </div>
-    <div class="image-item">
-      <img src="image9.jpg" alt="Product 9">
-      <p>Description of Product 9</p>
-      <button class="addToCartBtn" data-id="9" data-name="Product 9" data-price="90">Add to Cart</button>
-    </div>
+
+  <section id="featured-products">
+    <h2>Featured Products</h2>
+    <p>Check out our latest items below!</p>
+    <section class="gallery">
+      <div class="image-item">
+        <img src="img/book_of_week.jpg" alt="Book of the week image" height="219">
+        <p>Book Of the week</p>
+        <button class="addToCartBtn">View More</button>
+      </div>
+      <div class="image-item">
+        <img src="img/sale_items.jpg" alt="Sale Items logo">
+        <p>Sale Items</p>
+        <button class="addToCartBtn">View more</button>
+      </div>
+      <div class="image-item">
+        <img src="img/stationary.jpg" alt="Stationary items logo">
+        <p>Stationary Essentials</p>
+        <button class="addToCartBtn">View More</button>
+      </div>
+      <div class="image-item">
+        <img src="img/games.jpg" alt="Board Games & Puzzles logo">
+        <p>Board Games & Puzzles</p>
+  <button class="addToCartBtn">View More</button>
+      </div>
+      <div class="image-item">
+        <img src="img/membership.jpg" alt="Membership logo">
+        <p>Membership Details</p>
+  <button class="addToCartBtn">View More</button>
+      </div>
   </section>
+
+  
 
   <!-- Modal will be hidden until car is clicked -->
   <div id="cartModal" class="modal">
