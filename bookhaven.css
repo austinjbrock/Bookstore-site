@@ -91,6 +91,7 @@
   .gallery .image-item img {
     width: 100%;
     height: auto;
+    /* border - radius standard is 8px;  */
     border-radius: 8px;
   }
   
