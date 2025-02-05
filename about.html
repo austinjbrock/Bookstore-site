@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="bookhaven.css">
 </head>
 <body>
-  <!-- Sticky Navbar -->
   <nav class="navbar">
     <div class="logo">
       <img src="logo.png" alt="Logo" width="100">
@@ -17,7 +16,7 @@
       <a href="gallery.html">Gallery</a>
       <a href="about.html">About Us</a>
       <a href="testimonials.html">Testimonials</a>
-      <a href="cart.html">Cart</a>
+      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
     </div>
   </nav>
 
@@ -32,6 +31,19 @@
     <p>Email: contact@ourstore.com</p>
     <p>Hours: Mon-Fri: 9am - 6pm, Sat-Sun: 10am - 4pm</p>
   </section>
+
+  <!-- Modal will be hidden until car is clicked -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p><strong>Total: $<span id="totalPrice">0</span></strong></p>
+      <button id="checkoutBtn">Proceed to Checkout</button>
+      <span class="close"><button id="clearCartBtn">Clear Cart</button></span>
+    </div>
+  </div>
+
+
 
   <footer>
     <button id="subscribe-btn">Subscribe</button>

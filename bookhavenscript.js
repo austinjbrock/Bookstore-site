@@ -1,9 +1,9 @@
-// Initialize cart from localStorage or create a new one
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// Initialize cart from localStorage (using an object instead of an array)
+let cart = JSON.parse(localStorage.getItem('cart')) || {};
 
 // Update the cart count in the navbar
 function updateCartCount() {
-  document.getElementById('cartCount').textContent = cart.length;
+  document.getElementById('cartCount').textContent = Object.keys(cart).length;  // Count the number of unique items in the cart
 }
 
 // Update the cart modal with items
@@ -14,19 +14,23 @@ function updateCartModal() {
 
   let total = 0;
 
-  if (cart.length === 0) {
+  if (Object.keys(cart).length === 0) {
     cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
     totalPriceContainer.textContent = '0.00';
   } else {
-    cart.forEach(item => {
+    // Loop through the cart object
+    for (let id in cart) {
+      const item = cart[id];
       const itemElement = document.createElement('p');
       itemElement.textContent = `${item.name} - $${item.price}`;
       cartItemsContainer.appendChild(itemElement);
       total += item.price;
-    });
+    }
 
     totalPriceContainer.textContent = total.toFixed(2);
   }
+
+  console.log("Current Cart:", cart);  // Log cart when modal is updated
 }
 
 // Open cart modal
@@ -40,11 +44,16 @@ function closeCartModal() {
   document.getElementById('cartModal').style.display = 'none';
 }
 
-// Add item to cart
+// Add item to cart (with key-value pairs)
 function addToCart(item) {
-  cart.push(item);
-  localStorage.setItem('cart', JSON.stringify(cart)); // Save cart to localStorage
-  updateCartCount(); // Update cart count in navbar
+  if (!cart[item.id]) {
+    cart[item.id] = item;  // Add item to the cart object, using its id as the key
+    localStorage.setItem('cart', JSON.stringify(cart));  // Save cart to localStorage
+    updateCartCount();  // Update cart count in navbar
+    console.log("Cart after adding item:", cart);  // Log the entire cart
+  } else {
+    alert(`${item.name} is already in the cart.`);
+  }
 }
 
 // Event listener for "Add to Cart" buttons
@@ -55,7 +64,7 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
       name: this.dataset.name,
       price: parseFloat(this.dataset.price),
     };
-    addToCart(item);
+    addToCart(item);  // Add the item to the cart
   });
 });
 
@@ -74,19 +83,15 @@ window.addEventListener('click', function(event) {
 
 // Clear cart function
 function clearCart() {
-  // Clear the cart array and remove from localStorage
-  cart = [];
-  localStorage.removeItem('cart');
-  
-  // Update cart count in the navbar
-  updateCartCount();
-
-  // Optionally, update the cart modal
-  updateCartModal();
+  cart = {};  // Reset the cart to an empty object
+  localStorage.removeItem('cart');  // Remove cart from localStorage
+  updateCartCount();  // Update cart count in the navbar
+  updateCartModal();  // Update the cart modal (it will show the empty state)
+  console.log("Cart has been cleared.");  // Log the cart being cleared
+  console.log("Cart after clearing:", cart);  // Log the empty cart
 }
 
 // Event listener for the "Clear Cart" button
 document.getElementById('clearCartBtn').addEventListener('click', clearCart);
 
-// Initial cart count update on page load
 updateCartCount();
