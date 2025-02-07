@@ -58,17 +58,17 @@
 
 
 
-  <!-- Modal will be hidden until car is clicked -->
   <div id="cartModal" class="modal">
     <div class="modal-content">
       <h2>Your Cart</h2>
       <div id="cartItems"></div>
-      <p><strong>Total: $<span id="totalPrice">0</span></strong></p>
+      <p><strong>Total: $<span id="totalPrice">0.00</span></strong></p>
       <button id="checkoutBtn">Proceed to Checkout</button>
-      <span class="close"><button id="clearCartBtn">Clear Cart</button></span>
+      <button id="clearCartBtn">Clear Cart</button>
+      <button class="close" onclick="closeCartModal()">Close</button>
     </div>
   </div>
-
+ 
 
 
   <footer>

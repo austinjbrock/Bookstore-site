@@ -16,35 +16,54 @@
 
   }
   
-  /* Navbar Styles */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 20px;
-    z-index: 1000;
-  }
-  
-  .navbar .logo img {
-    height: 50px;
-  }
-  
-  .navbar .nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    padding: 8px 12px;
-  }
-  
-  .navbar .nav-links a:hover {
-    background-color: #555;
-    border-radius: 5px;
-  }
-  
+ /* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;  /* Center all items */
+  align-items: center;  /* Vertically center items */
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;  /* Align logo to the left */
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-header {
+  text-align: center;  /* Center the heading */
+  margin: 0;
+}
+
+.navbar .nav-links {
+  flex: 1;
+  display: flex; /* Ensure links are laid out horizontally */
+  justify-content: flex-end; /* Align links to the right */
+  align-items: center; /* Align them vertically */
+}
+
+.navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+  padding: 8px 12px;
+}
+
+.navbar .nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
   /* Main Header */
   header {
     text-align: center;
