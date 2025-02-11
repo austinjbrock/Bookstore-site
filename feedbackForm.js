@@ -33,15 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Optional: Log the feedback data to the console (for debugging)
     console.log('Feedback Submitted:', feedback);
     
-    // Optional: Provide feedback to the user (confirmation message)
-    alert("Thank you for your feedback! Your order details have been saved.");
+    // Provide feedback to the user (confirmation message)
+    alert(`Thank you for your feedback ${customerName}! Your order details have been saved.`);
     
     // Reset the form
     feedbackForm.reset();
   });
 });
-
-
 
 // Display feedback on the page (optional)
 function displayFeedback() {

@@ -3,30 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <title>Book Haven Home</title>
   <link rel="stylesheet" href="bookhaven.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;500&family=Comfortaa:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Sticky Navbar -->
   <nav class="navbar">
-    <!-- <img src="img/books-svgrepo-com.svg" alt="Logo" width="100"> -->
-    <div class="logo">
-      <img src="img/books-svgrepo-com.svg" alt="Logo" width="100">
+    <div class="logo"><a href="index.html">
+      <img src="img/logo1.png" alt="Logo">
+      </a>
     </div>
-    <h1 class="nav-header">BookHaven Bookstore</h1>
+    <h1 class="nav-header">Book Haven Bookstore</h1>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="about.html">About Us</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="custom.html">Community</a>
       <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
     </div>
   </nav>
 
-  <header>
-    <h1>BookHaven Bookstore</h1>
-    <p>Welcome to the best E-commerce Bookstore</p>
+  <header class="intro-header">
+    <h2>A Literary Escape: Find Your Quiet in the Pages</h2>
+    <p>In the rush of everyday life, it’s easy to feel overwhelmed. A place where time slows down the moment you open a book. 
+      Each page turns into a new world, offering you a chance to step away from the busy-ness of life and get lost in a story that captivates your imagination.
+      Whether you’re diving into a thrilling adventure, exploring a timeless classic, or uncovering a thought-provoking tale, you’ll find solace in the words.
+       It's more than just a bookstore—it’s a space for you to recharge, connect, and find your next great escape.
+    </p>
   </header>
+
+  
+  <!-- Gallery Section -->
+  <section id="featured-products">
+    <h2>Featured Books & Products</h2>
+    <p>Discover our curated selection of must-read books and fun games to complement your reading experience. Dive into a variety of genres and expand your horizons!</p>
+    <div class="gallery">
+      <div class="image-item">
+        <img src="img/book1.png" alt="Book 1">
+        <button>Shop Books</button>
+      </div>
+      <div class="image-item">
+        <img src="img/Magazine2.png" alt="Book 2">
+        <button>Shop Magazines</button>
+      </div>
+      <div class="image-item">
+        <img src="img/notebook.png" alt="Game 1">
+        <button>Shop Notebooks</button>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Readers Are Saying</h2>
+    <div class="testimonial">
+      <p>"This bookstore is my ultimate escape! I always find the best reads and the staff is so friendly!" - Vanessa C.</p>
+    </div>
+    <div class="testimonial">
+      <p>"A true literary haven! I feel like I’m at home every time I walk in." - James L.</p>
+    </div>
+    <div class="testimonial">
+      <p>"I love the variety of books and the events they host! I’ve met so many amazing people here." - Emily T.</p>
+    </div>
+  </section>
+
+<!-- Membership Section -->
+<section id="membership" class="intro-header">
+  <h2>Become a Member of Our Book Haven</h2>
+  <p>Join our community and enjoy exclusive perks, including discounts on books, early access to events, and the opportunity to connect with fellow book lovers. Our membership is designed for readers who want to dive deeper into the world of books while enjoying special benefits.</p>
+  <button class="btn">Join Now</button>
+</section>
+
 
 
   <!-- Cart Modal -->
@@ -42,8 +95,23 @@
   </div>
 
   <footer>
-    <button id="subscribe-btn">Subscribe</button>
-    <p>&copy; 2025 Our Store | All Rights Reserved</p>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+
+
+    <!-- Links will not redirect to sites. Just for show. -->
+    <div class="social-links">
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <button class="btn">Subscribe</button>
+    <p>&copy; 2025 Book Haven | All Rights Reserved</p>
   </footer>
 
   <script src="bookhavenscript.js"></script>

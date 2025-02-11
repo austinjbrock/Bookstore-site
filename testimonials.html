@@ -5,37 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testimonials</title>
   <link rel="stylesheet" href="bookhaven.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;500&family=Comfortaa:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-  <!-- Sticky Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo" width="100">
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About Us</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
-    </div>
-  </nav>
-  <header>
+ <!-- Sticky Navbar -->
+ <nav class="navbar">
+  <div class="logo"><a href="index.html">
+    <img src="img/logo1.png" alt="Logo">
+    </a>
+  </div>
+  <h1 class="nav-header">Book Haven Bookstore</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="custom.html">Community</a>
+    <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+  </div>
+</nav>
+
+  <header class="testimonial-header">
     <h1>What Our Customers Say</h1>
     <p>Read feedback from our happy customers.</p>
   </header>
 
   <section class="testimonials">
     <div class="testimonial">
-      <p>"Great products! The quality is amazing, and the service was fantastic!"</p>
-      <strong>- Jane Doe</strong>
+      <p>"This bookstore is my sanctuary. The calm and peaceful atmosphere is the perfect escape from the chaos of everyday life."</p>
+      <strong>- Emma Wilson</strong>
     </div>
     <div class="testimonial">
-      <p>"Fast shipping and excellent customer support. Will definitely shop again!"</p>
-      <strong>- John Smith</strong>
+      <p>"Every visit to Book Haven is like a mini-vacation. The environment is so relaxing, and they always have the best selection of books!"</p>
+      <strong>- Michael Brown</strong>
+    </div>
+    <div class="testimonial">
+      <p>"The staff here is so friendly, and the selection is phenomenal. It's my favorite spot to relax and discover new books!"</p>
+      <strong>- Sarah Green</strong>
+    </div>
+    <div class="testimonial">
+      <p>"A true literary escape. Not only do I find great books, but the store itself has such a soothing and peaceful ambiance."</p>
+      <strong>- Daniel Lee</strong>
+    </div>
+    <div class="testimonial">
+      <p>"The quality of the products is exceptional, and I love how relaxing it is to browse here. I always leave feeling inspired."</p>
+      <strong>- Lily Adams</strong>
     </div>
   </section>
-
 
   <div id="cartModal" class="modal">
     <div class="modal-content">
@@ -48,13 +68,11 @@
     </div>
   </div>
 
-
-
-
   <footer>
-    <button id="subscribe-btn">Subscribe</button>
+    <button id="subscribe-btn" class="btn">Subscribe</button>
     <p>&copy; 2025 Our Store | All Rights Reserved</p>
   </footer>
+
   <script src="bookhavenscript.js"></script>
 </body>
 </html>

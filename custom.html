@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story | Book Haven</title>
+  <link rel="stylesheet" href="bookhaven.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <!-- Sticky Navbar -->
+  <nav class="navbar">
+    <div class="logo"><a href="index.html">
+      <img src="img/logo1.png" alt="Logo">
+      </a>
+    </div>
+    <h1 class="nav-header">Book Haven Bookstore</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="custom.html">Community</a>
+      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+    </div>
+  </nav>
+
+  <header class="community-header">
+    <h1>Our Story: More Than Just Books</h1>
+    <p>Learn more about our community involvement, events, and customer experiences.</p>
+  </header>
+
+  <!-- Community Involvement Section -->
+  <section id="community-involvement" class="intro-header">
+    <h2>Our Commitment to Community</h2>
+    <p>At Book Haven, we believe in supporting our local community and giving back. From local author signings to charity events, we strive to create a space where people come together to celebrate the power of books and reading. We actively participate in community-building events and work to ensure that our bookstore is a place for everyone.</p>
+
+    <ul>
+      <p> - Monthly book drives to support local libraries and schools.</p>
+      <p> - Collaborations with nearby coffee shops for literary events.</p>
+      <p> - Hosting local author signings and book launches.</p>
+      <p> - Book clubs that bring our community together to discuss important issues and current reads.</p>
+    </ul>
+  </section>
+
+  <!-- Events and Collaborations Section -->
+  <section id="events" class="intro-header">
+    <h2>Exciting Upcoming Events & Collaborations</h2>
+    <p>We are always looking to create opportunities for our community to come together through literature. From workshops to collaborative events with local businesses, Book Haven is the place for book lovers to engage with the world in exciting and meaningful ways.</p>
+    
+    <div class="event-item">
+      <h3>Book Club Meetup: Mysteries and Thrillers</h3>
+      <p>Join us on the first Thursday of every month for a thrilling discussion of our favorite mystery novels. Newcomers welcome!</p>
+      <strong>Date: March 5, 2025</strong>
+    </div>
+    <div class="event-item">
+      <h3>Local Author Spotlight</h3>
+      <p>Meet local author Sarah Joy as she launches her new novel. Enjoy a reading and Q&A session followed by book signings!</p>
+      <strong>Date: March 12, 2025</strong>
+    </div>
+    <div class="event-item">
+      <h3>Poetry Night at the Coffee Corner</h3>
+      <p>Join us for an evening of poetry readings and open mic sessions. Bring your poems or just enjoy the words from the local community.</p>
+      <strong>Date: March 20, 2025</strong>
+    </div>
+    <div class="event-item">
+      <h3>Spring Book Swap & Charity Drive</h3>
+      <p>Bring a book, swap a book, and help raise funds for local literacy programs. All proceeds will go toward supporting reading initiatives.</p>
+      <strong>Date: March 25, 2025</strong>
+    </div>
+  </section>
+
+  <!-- Cart Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <h2>Your Cart</h2>
+      <div id="cartItems"></div>
+      <p><strong>Total: $<span id="totalPrice">0.00</span></strong></p>
+      <button id="checkoutBtn">Proceed to Checkout</button>
+      <button id="clearCartBtn">Clear Cart</button>
+      <button class="close" onclick="closeCartModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+
+
+    <!-- Links will not redirect to sites. Just for show. -->
+    <div class="social-links">
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <button class="btn">Subscribe</button>
+    <p>&copy; 2025 Book Haven | All Rights Reserved</p>
+  </footer>
+  <script src="bookhavenscript.js"></script>
+</body>
+</html>

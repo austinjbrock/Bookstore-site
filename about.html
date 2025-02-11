@@ -5,37 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
   <link rel="stylesheet" href="bookhaven.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;500&family=Comfortaa:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo" width="100">
-    </div>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="about.html">About Us</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
-    </div>
-  </nav>
+ <!-- Sticky Navbar -->
+ <nav class="navbar">
+  <div class="logo"><a href="index.html">
+    <img src="img/logo1.png" alt="Logo">
+    </a>
+  </div>
+  <h1 class="nav-header">Book Haven Bookstore</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About Us</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="custom.html">Community</a>
+    <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+  </div>
+</nav>
 
-  <header>
+
+  <header class="about-header">
     <h1>About Us</h1>
-    <p>We are a company dedicated to providing unique products.</p>
+    <h4>Book Haven Bookstore is a local treasure for book enthusiasts, offering a diverse selection of books, magazines, journals, and office supplies. With a deep-rooted commitment to fostering literary exploration and a love for reading, it is embarking on the creation of an online presence that mirrors its dedication to the world of words. Serving a broad audience of book lovers and knowledge seekers, its central goal is to amplify its visibility, cultivate a vibrant literary community, and simplify the process of book inquiries and purchases. Its target audience comprises avid readers, students, and individuals in search of high-quality reading materials and office essentials. Book Haven Bookstore’s website theme revolves around celebrating the written word, creating an inviting digital space that encourages literary discovery, and supporting intellectual growth.
+
+    </h4>
   </header>
 
-  <section>
+  <section class="about-section">
     <h2>Contact Information</h2>
-    <p>Phone: (123) 456-7890</p>
-    <p>Email: contact@ourstore.com</p>
-    <p>Hours: Mon-Fri: 9am - 6pm, Sat-Sun: 10am - 4pm</p>
+    <ol>Phone: (123) 456-7890</ol>
+    <ol>Email: contact@ourstore.com</ol>
+    <h3>Hours</h3>
+     <ol>Mon-Fri: 9 a.m. to 8 p.m.</ol>
+      <ol>Saturday: 10 a.m. to 6 p.m.</ol>
+      <ol>Sunday: 11 a.m. to 5 p.m.</ol>
   </section>
 
 
 
-  <section>
-    <h2>Customer Feedback / Custom Order</h2>
+  <section class="feedback-form">
+    <h2>Customer Feedback / Custom Order</h2></br>
     <form id="feedbackForm">
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required>
@@ -43,21 +58,12 @@
       <label for="email">Email Address:</label>
       <input type="email" id="email" name="email" required>
   
-      <label for="orderDetails">Order Details / Feedback:</label>
+      <label for="orderDetails">Order Details / Feedback:</label><br>
       <textarea id="orderDetails" name="orderDetails" required></textarea>
   
       <button type="submit">Submit</button>
     </form>
   </section>
-
-
-  <section id="feedbackSection">
-    <h2>Customer Feedback / Custom Orders</h2>
-    <div id="feedbackList"></div>
-  </section>
-
-
-
   <div id="cartModal" class="modal">
     <div class="modal-content">
       <h2>Your Cart</h2>
@@ -72,9 +78,25 @@
 
 
   <footer>
-    <button id="subscribe-btn">Subscribe</button>
-    <p>&copy; 2025 Our Store | All Rights Reserved</p>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About Us</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
+
+
+    <!-- Links will not redirect to sites. Just for show. -->
+    <div class="social-links">
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    <button class="btn">Subscribe</button>
+    <p>&copy; 2025 Book Haven | All Rights Reserved</p>
   </footer>
+
   <script src="bookhavenscript.js"></script>
   <script src="feedbackForm.js"></script>
 </body>

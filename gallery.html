@@ -5,66 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
   <link rel="stylesheet" href="bookhaven.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100;200;300;500&family=Comfortaa:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Questrial&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
   <!-- Sticky Navbar -->
   <nav class="navbar">
-    <div class="logo">
-      <img src="logo.png" alt="Logo" width="100">
+    <div class="logo"><a href="index.html">
+      <img src="img/logo1.png" alt="Logo">
+      </a>
     </div>
+    <h1 class="nav-header">Book Haven Bookstore</h1>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="gallery.html">Gallery</a>
       <a href="about.html">About Us</a>
       <a href="testimonials.html">Testimonials</a>
+      <a href="custom.html">Community</a>
       <a href="#" id="cartLink">Cart (<span id="cartCount">0</span>)</a>
     </div>
   </nav>
 
-  <header>
+  <header class="gallery-header">
     <h1>Gallery</h1>
-    <p>Browse our products below.</p>
+    <p>We offer a wide variety of products for any type of consumer;<br> Readers, writers, gamers, and collectors!</p>
   </header>
-
 
   <section id="featured-products">
     <h2>Featured Products</h2>
-    <p>Check out our latest items below!</p>
     <section class="gallery">
       <div class="image-item">
-        <img src="img/book_of_week.jpg" alt="Book of the week image" height="219">
-        <p>Book Of the week</p>
-        <button class="addToCartBtn">View More</button>
+        <img src="img/Book1.png" alt="Book of the week image" height="219">
+        <h3>Book of the week</h3>
+        <p>Each week our staff holds a meeting to select a new book for our customers. You can suggest books or topics in our contact page.</p>
+        <button class="addToCartBtn" data-id="1" data-name="Book of the Week" data-price="19.99">Add Book</button>
       </div>
       <div class="image-item">
-        <img src="img/sale_items.jpg" alt="Sale Items logo">
-        <p>Sale Items</p>
-        <button class="addToCartBtn">View more</button>
+        <img src="img/Book2.png" alt="Sale Items logo">
+        <h3>Upcoming Releases</h3>
+        <p>With a membership, you can find key dates when your favorite authors will release their newest work.</p>
+        <button class="addToCartBtn" data-id="2" data-name="Upcoming Releases" data-price="29.99">Add Queue</button>
       </div>
       <div class="image-item">
-        <img src="img/stationary.jpg" alt="Stationary items logo">
-        <p>Stationary Essentials</p>
-        <button class="addToCartBtn">View More</button>
+        <img src="img/Book3.png" alt="Stationary items logo">
+        <h3>Book Donations</h3>
+        <p>Each Week our staff contribute used books to local schools in need.</p>
+        <button class="addToCartBtn" data-id="3" data-name="Book Donations" data-price="0.00">View More</button>
       </div>
       <div class="image-item">
-        <img src="img/games.jpg" alt="Board Games & Puzzles logo">
-        <p>Board Games & Puzzles</p>
-  <button class="addToCartBtn">View More</button>
+        <img src="img/Magazine1.png" alt="Board Games & Puzzles logo" id="magazine">
+        <h3>Magazines</h3>
+        <p>Our store has a wide range of Magazines subscriptions and we're always signing up for more.</p>
+        <button class="addToCartBtn" data-id="4" data-name="Magazines Subscription" data-price="12.99">View More</button>
       </div>
       <div class="image-item">
-        <img src="img/membership.jpg" alt="Membership logo">
-        <p>Membership Details</p>
-  <button class="addToCartBtn">View More</button>
+        <img src="img/ToteBag.png" alt="Membership logo">
+        <h3>Memberships</h3>
+        <p>We offer three tiers of Membership so you can decide which fits your lifestyle best: <ol>Executive</ol>
+        <ol>Premier</ol>
+        <ol>Priority</ol></p>
+        <button class="addToCartBtn" data-id="5" data-name="Membership" data-price="49.99">Buy Membership</button>
       </div>
-    </div>
-    <div class="image-item">
-      <img src="img/membership.jpg" alt="New Item here">
-      <p>New Content Here</p>
-<button class="addToCartBtn">View More</button>
-    </div>
+      <div class="image-item">
+        <img src="img/notebook.png" alt="New Item here">
+        <h3>Stationary Items</h3>
+        <p>Being prepared is essential. We offer stationary supplies such as pens, notebooks, and calculators.</p>
+        <button class="addToCartBtn" data-id="6" data-name="Stationary Items" data-price="5.99">View More</button>
+      </div>
+    </section>
   </section>
-
-  
 
   <div id="cartModal" class="modal">
     <div class="modal-content">
@@ -77,9 +88,8 @@
     </div>
   </div>
 
-
   <footer>
-    <button id="subscribe-btn">Subscribe</button>
+    <button id="subscribe-btn" class="btn">Subscribe</button>
     <p>&copy; 2025 Our Store | All Rights Reserved</p>
   </footer>
   <script src="bookhavenscript.js"></script>

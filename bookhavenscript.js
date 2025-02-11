@@ -52,7 +52,7 @@ function addToCart(item) {
     updateCartCount();  // Update cart count in navbar
     console.log("Cart after adding item:", cart);  // Log the entire cart
   } else {
-    alert(`${item.name} is already in the cart.`);
+    alert(`${item.name} has been added to the cart.`);  // Add item confirmation alert
   }
 }
 
@@ -61,10 +61,15 @@ document.querySelectorAll('.addToCartBtn').forEach(button => {
   button.addEventListener('click', function() {
     const item = {
       id: this.dataset.id,
-      name: this.dataset.name,
+      name: this.dataset.name,  // Ensure this is provided in the HTML
       price: parseFloat(this.dataset.price),
     };
-    addToCart(item);  // Add the item to the cart
+
+    if (item.name && item.name !== 'undefined') {  // Check if item.name is valid
+      addToCart(item);  // Add the item to the cart
+    } else {
+      alert("Error: Item name is undefined or missing. Please check the product data.");
+    }
   });
 });
 

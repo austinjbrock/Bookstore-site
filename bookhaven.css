@@ -1,3 +1,19 @@
+/* Color Palette -- PALETTE NUMBER 1*/ 
+/* #2E0457 - INKWELL Blue */
+/* #EE583F - INTENSITY INDIGO */
+/* #F7B3CC - DUSTY ROSE */
+/* #C7B65E - AGED GOLD */
+/* #FFF7EE - PARCHMENT WHITE */
+
+/* TYPOGRAPHY OPTION 2 
+  - ARIAL BOLD
+  -COMFORTAA NORMAL
+  - CALIBRI BOLD
+  - CALIBRI NORMAL
+  -ARIAL BOLD 11PX
+*/
+
+
 /* General Reset */
 * {
     margin: 0;
@@ -10,8 +26,8 @@
     font-family: Arial, sans-serif;
     line-height: 1.6;
     padding-top: 70px; 
-    background-color: #041224;
-    color: #cfcd93;
+    background-color: #fff7ee;
+    color: #2E0457;
     font-family: 'Courier New', Courier, monospace;
 
   }
@@ -21,7 +37,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #2E4057;
   color: white;
   display: flex;
   justify-content: center;  /* Center all items */
@@ -41,15 +57,15 @@
 }
 
 .nav-header {
-  text-align: center;  /* Center the heading */
+  text-align: center; 
   margin: 0;
 }
 
 .navbar .nav-links {
   flex: 1;
-  display: flex; /* Ensure links are laid out horizontally */
-  justify-content: flex-end; /* Align links to the right */
-  align-items: center; /* Align them vertically */
+  display: flex; 
+  justify-content: flex-end; 
+  align-items: center; 
 }
 
 .navbar .nav-links a {
@@ -60,42 +76,61 @@
 }
 
 .navbar .nav-links a:hover {
-  background-color: #555;
+  background-color: #ee583f;
   border-radius: 5px;
 }
 
+.navbar h1{
+  font-size: 32px;
+  font-family: 'Arial';
+  color: #C7B65E;
+}
+
   /* Main Header */
-  header {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-
+  .intro-header {
+    text-align: left;
+    padding: 40px 30px;
+    color: #2E0457;
 
   }
   
-  header p {
-    font-size: 1.2em;
-    color: #666;
+  .intro-header h2{
+    font-family: Arial;
+    font-weight: 400;
+  }
+
+  .intro-header p {
+    font-family: 'comfortaa';
+    font-size: 16px;
   }
 
   #featured-products{
     text-align: center;
-
+    
   }
 
   #featured-products p{
     margin-bottom: 20px;
+    font-size: 17.5px;
   }
 
   footer {
     text-align: center;
     margin-top: 15px;
   }
-  
+
+
+  /*subscribe form */
+
+
   /* Gallery Layout */
+  .gallery-header {
+    padding-top: 100px;
+    text-align: center;
+    margin: 40px;
+  }
+
+
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -113,9 +148,20 @@
     /* border - radius standard is 8px;  */
     border-radius: 8px;
   }
+
+  .gallery .image-item p {
+    margin: 0 60px;
+    text-align: center;
+
+  }
+
+  .gallery .image-item h3 {
+    margin: 10px 0;
+    text-decoration: underline;
+  }
   
   .gallery .image-item button {
-    background-color: #333;
+    background-color: #2E4057;
     color: white;
     padding: 10px;
     border: none;
@@ -125,19 +171,120 @@
   }
   
   .gallery .image-item button:hover {
-    background-color: #555;
+    background-color: #ee583f;
   }
   
+  .btn {
+    background-color: #2E4057;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+
+
+
+  /* About section */
+
+  .about-header {
+    text-align: center;
+    margin: 40px;
+  }
+
+
+  .about-section{
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    text-align: center;
+  }
+
+/* Feedback Form Styles */
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;  /* Center the form */
+  padding: 20px;
+  background-color: #fff;  /* Light background for contrast */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form h2 {
+  text-align: center;
+  color: #2E0457;  /* Dark purple color */
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.feedback-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+  color: #2E0457;  /* Dark purple for text */
+  font-weight: bold;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #FFF7EE;  /* Parchment White background */
+  color: #2E0457;  /* Text color matches header */
+}
+
+.feedback-form textarea {
+  height: 150px;  /* A little more height for textarea */
+  resize: vertical;  /* Allow resizing vertically */
+}
+
+.feedback-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #EE583F;  /* Intensity Indigo color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #2E4057;  /* Hover effect - dark purple */
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #EE583F;  /* Highlight input and textarea on focus */
+  outline: none;
+}
+
+
+
   /* Testimonials Section */
+
+  .testimonial-header{
+    text-align: center;
+    margin: 40px;
+  }
+
+
   .testimonials {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 40px;;
   }
   
   .testimonials .testimonial {
-    background-color: #f9f9f9;
+    background-color: #2E4057;
+    color: #FFF7EE;
     border: 1px solid #ddd;
     padding: 20px;
     width: 80%;
@@ -146,6 +293,20 @@
     text-align: center;
   }
   
+
+/* Community outreach section */
+
+.community-header {
+  margin: 40px; 
+  text-align: center;
+}
+
+.intro-header {
+  text-align: center;
+  text-decoration: none;
+}
+
+
   /* Modal Styles */
 .modal {
   display: none;
@@ -195,5 +356,24 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #ee583f;
+}
+
+
+/* Font-Awesome Icons */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 24px;
+  color: #2e0457; /* You can adjust this color */
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ee583f; /* Change the color on hover */
 }
